@@ -71,7 +71,7 @@ const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
   [ChainId.SCROLL]:
     'https://api.goldsky.com/api/public/project_clnz7akg41cv72ntv0uhyd3ai/subgraphs/aperture-scroll/uniswap-v3/gn',
   [ChainId.BLAST_SEPOLIA]:
-    'https://api.studio.thegraph.com/query/64710/monoswap-v3/v0.0.1',
+    'https://api.studio.thegraph.com/query/64710/monoswap-v3/v0.0.2',
 };
 
 const PAGE_SIZE = 1000; // 1k is max possible query size from subgraph.
