@@ -596,10 +596,10 @@ export const DAI_SCROLL = new Token(
 );
 
 export const USDC_BLAST_SEPOLIA = new Token(
-  ChainId.SCROLL,
+  ChainId.BLAST_SEPOLIA,
   '0x7Cb0C805544C5BA83A6e014A9e199E1C8ed16137',
   6,
-  'USDC',
+  'tUSDC',
   'USD Coin'
 );
 
