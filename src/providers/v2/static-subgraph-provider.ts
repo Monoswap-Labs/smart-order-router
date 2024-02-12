@@ -1,12 +1,12 @@
 import { Token } from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
+import { Pair } from '@monoswap-labs/v2-sdk';
 import _ from 'lodash';
 
 import { ChainId } from '../../util/chain-to-addresses';
 import { WRAPPED_NATIVE_CURRENCY } from '../../util/chains';
 import { log } from '../../util/log';
 import {
-  DAI_MAINNET,
+  DAI_MAINNET, USDC_BLAST_SEPOLIA,
   USDC_MAINNET,
   USDT_MAINNET,
   WBTC_MAINNET,
@@ -46,7 +46,10 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.MANTA_PACIFIC_TESTNET]: [],
   [ChainId.MANTA_PACIFIC]: [],
   [ChainId.SCROLL]: [],
-  [ChainId.BLAST_SEPOLIA]: [],
+  [ChainId.BLAST_SEPOLIA]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.BLAST_SEPOLIA]!,
+    USDC_BLAST_SEPOLIA,
+  ],
 };
 
 /**

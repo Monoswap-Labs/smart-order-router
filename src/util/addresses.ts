@@ -115,6 +115,8 @@ export const NONFUNGIBLE_POSITION_MANAGER_ADDRESS =
 export const V3_MIGRATOR_ADDRESS =
   CHAIN_TO_ADDRESSES_MAP[ChainId.MAINNET].v3MigratorAddress;
 export const MULTICALL2_ADDRESS = '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696';
+export const V3_FACTORY_ADDRESS = '0xbAB2F66B5B3Be3cC158E3aC1007A8DF0bA5d67F4';
+export const V3_INIT_HASH = '0xda571d86ad43edb30b030580c077ec40d48a0a4203fc3d13dc8ebda8e7b46c44';
 
 export type AddressMap = { [chainId: number]: string | undefined };
 

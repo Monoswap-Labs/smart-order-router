@@ -5,7 +5,7 @@ import retry, { Options as RetryOptions } from 'async-retry';
 import _ from 'lodash';
 
 import { IUniswapV3PoolState__factory } from '../../types/v3/factories/IUniswapV3PoolState__factory';
-import { V3_CORE_FACTORY_ADDRESSES } from '../../util/addresses';
+import {V3_CORE_FACTORY_ADDRESSES, V3_INIT_HASH} from '../../util/addresses';
 import { ChainId } from '../../util/chain-to-addresses';
 import { log } from '../../util/log';
 import { poolToString } from '../../util/routes';
@@ -230,6 +230,7 @@ export class V3PoolProvider implements IV3PoolProvider {
       tokenA: token0,
       tokenB: token1,
       fee: feeAmount,
+      initCodeHashManualOverride: V3_INIT_HASH
     });
 
     this.POOL_ADDRESS_CACHE[cacheKey] = poolAddress;
