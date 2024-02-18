@@ -1,8 +1,8 @@
-import { Currency, Ether, NativeCurrency, Token } from '@uniswap/sdk-core';
+import {Currency, Ether, NativeCurrency, Token} from '@monoswap-labs/sdk-core';
 
-import { ChainId } from './chain-to-addresses';
+import {ChainId} from './chain-to-addresses';
 
-export const V2_SUPPORTED = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA];
+export const V2_SUPPORTED = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA, ChainId.BLAST_SEPOLIA];
 
 export const HAS_L1_FEE = [
   ChainId.OPTIMISM,

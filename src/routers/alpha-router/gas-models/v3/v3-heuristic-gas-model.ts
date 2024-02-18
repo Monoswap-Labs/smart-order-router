@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { Percent, Price, TradeType } from '@uniswap/sdk-core';
-import { Pool } from '@uniswap/v3-sdk';
+import { Percent, Price, TradeType } from '@monoswap-labs/sdk-core';
+import { Pool } from '@monoswap-labs/v3-sdk';
 import _ from 'lodash';
 
 import {

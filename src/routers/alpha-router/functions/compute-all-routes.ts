@@ -1,6 +1,6 @@
-import { Token } from '@uniswap/sdk-core';
+import { Token } from '@monoswap-labs/sdk-core';
 import { Pair } from '@monoswap-labs/v2-sdk';
-import { Pool } from '@uniswap/v3-sdk';
+import { Pool } from '@monoswap-labs/v3-sdk';
 
 import { log } from '../../../util/log';
 import { poolToString, routeToString } from '../../../util/routes';

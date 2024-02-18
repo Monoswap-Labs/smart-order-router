@@ -4,8 +4,8 @@ import {
   encodeMixedRouteToPath,
   MixedRouteSDK,
   Protocol,
-} from '@uniswap/router-sdk';
-import { encodeRouteToPath } from '@uniswap/v3-sdk';
+} from '@monoswap-labs/router-sdk';
+import { encodeRouteToPath } from '@monoswap-labs/v3-sdk';
 import retry, { Options as RetryOptions } from 'async-retry';
 import _ from 'lodash';
 import stats from 'stats-lite';

@@ -1,7 +1,7 @@
-import { Token } from '@uniswap/sdk-core';
-import { FACTORY_ADDRESS } from '@uniswap/v3-sdk';
+import { Token } from '@monoswap-labs/sdk-core';
+import { FACTORY_ADDRESS } from '@monoswap-labs/v3-sdk';
 
-import { ChainId, CHAIN_TO_ADDRESSES_MAP } from './chain-to-addresses';
+import { CHAIN_TO_ADDRESSES_MAP, ChainId } from './chain-to-addresses';
 import { NETWORKS_WITH_SAME_UNISWAP_ADDRESSES } from './chains';
 
 export const BNB_TICK_LENS_ADDRESS =
@@ -101,6 +101,9 @@ export const UNISWAP_MULTICALL_ADDRESSES: AddressMap = {
 export const SWAP_ROUTER_02_ADDRESSES = (chainId: number): string => {
   if (chainId == ChainId.BNB) {
     return BNB_SWAP_ROUTER_02_ADDRESS;
+  }
+  if (chainId == ChainId.BLAST_SEPOLIA) {
+    return "0xF339F231678e738c4D553e6b60305b852a4C526B"
   }
   return '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45';
 };

@@ -1,6 +1,6 @@
-import { Protocol } from '@uniswap/router-sdk';
-import { Token, TradeType } from '@uniswap/sdk-core';
-import { FeeAmount } from '@uniswap/v3-sdk';
+import { Protocol } from '@monoswap-labs/router-sdk';
+import { Token, TradeType } from '@monoswap-labs/sdk-core';
+import { FeeAmount } from '@monoswap-labs/v3-sdk';
 import _ from 'lodash';
 
 import {

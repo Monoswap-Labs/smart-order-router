@@ -3,14 +3,14 @@ import { JsonRpcProvider } from '@ethersproject/providers';
 import {
   PERMIT2_ADDRESS,
   UNIVERSAL_ROUTER_ADDRESS,
-} from '@uniswap/universal-router-sdk';
+} from '@monoswap-labs/universal-router-sdk';
 import axios from 'axios';
 import { BigNumber } from 'ethers/lib/ethers';
 
 import { SwapOptions, SwapRoute, SwapType } from '../routers';
 import { Erc20__factory } from '../types/other/factories/Erc20__factory';
 import { Permit2__factory } from '../types/other/factories/Permit2__factory';
-import { log, MAX_UINT160, SWAP_ROUTER_02_ADDRESSES } from '../util';
+import {log, MAX_UINT160, SWAP_ROUTER_02_ADDRESSES} from '../util';
 import { APPROVE_TOKEN_FOR_TRANSFER } from '../util/callData';
 import { ChainId } from '../util/chain-to-addresses';
 import {

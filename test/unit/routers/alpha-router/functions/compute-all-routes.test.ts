@@ -1,5 +1,5 @@
 import { Pair } from '@monoswap-labs/v2-sdk';
-import { encodeSqrtRatioX96, FeeAmount, Pool } from '@uniswap/v3-sdk';
+import { encodeSqrtRatioX96, FeeAmount, Pool } from '@monoswap-labs/v3-sdk';
 import {
   CurrencyAmount,
   DAI_MAINNET as DAI,
