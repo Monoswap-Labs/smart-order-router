@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { Currency, Token } from '@uniswap/sdk-core';
+import { Currency, Token } from '@monoswap-labs/sdk-core';
 
 import { AAVE_MAINNET, LIDO_MAINNET } from '../../../../providers';
 import { ChainId } from '../../../../util/chain-to-addresses';

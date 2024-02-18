@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { partitionMixedRouteByProtocol } from '@uniswap/router-sdk';
-import { Pair } from '@uniswap/v2-sdk';
-import { Pool } from '@uniswap/v3-sdk';
+import { partitionMixedRouteByProtocol } from '@monoswap-labs/router-sdk';
+import { Pair } from '@monoswap-labs/v2-sdk';
+import { Pool } from '@monoswap-labs/v3-sdk';
 import JSBI from 'jsbi';
 import _ from 'lodash';
 

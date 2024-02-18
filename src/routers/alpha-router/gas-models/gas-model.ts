@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { Token } from '@uniswap/sdk-core';
-import { Pool } from '@uniswap/v3-sdk';
+import { Token } from '@monoswap-labs/sdk-core';
+import { Pool } from '@monoswap-labs/v3-sdk';
 
 import { ProviderConfig } from '../../../providers/provider';
 import {

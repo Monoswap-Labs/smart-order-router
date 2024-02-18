@@ -1,4 +1,4 @@
-import { Token } from '@uniswap/sdk-core';
+import { Token } from '@monoswap-labs/sdk-core';
 import retry from 'async-retry';
 import Timeout from 'await-timeout';
 import { gql, GraphQLClient } from 'graphql-request';
@@ -39,9 +39,11 @@ type RawV2SubgraphPool = {
 const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
   [ChainId.MAINNET]:
     'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v2-dev',
+  [ChainId.BLAST_SEPOLIA]:
+    'https://api.studio.thegraph.com/query/64710/monoswap-v2/v0.0.2',
 };
 
-const threshold = 0.025;
+// const threshold = 0.025;
 
 const PAGE_SIZE = 1000; // 1k is max possible query size from subgraph.
 
@@ -197,16 +199,16 @@ export class V2SubgraphProvider implements IV2SubgraphProvider {
     // Which helps filter pools with manipulated prices/liquidity.
 
     // TODO: Remove. Temporary fix to ensure tokens without trackedReserveETH are in the list.
-    const FEI = '0x956f47f50a910163d8bf957cf5846d573e7f87ca';
+    // const FEI = '0x956f47f50a910163d8bf957cf5846d573e7f87ca';
 
     const poolsSanitized: V2SubgraphPool[] = pools
-      .filter((pool) => {
-        return (
-          pool.token0.id == FEI ||
-          pool.token1.id == FEI ||
-          parseFloat(pool.trackedReserveETH) > threshold
-        );
-      })
+      // .filter((pool) => {
+      //   return (
+      //     pool.token0.id == FEI ||
+      //     pool.token1.id == FEI ||
+      //     parseFloat(pool.trackedReserveETH) > threshold
+      //   );
+      // })
       .map((pool) => {
         return {
           ...pool,

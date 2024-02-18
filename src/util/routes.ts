@@ -1,13 +1,13 @@
-import { Protocol } from '@uniswap/router-sdk';
-import { Percent } from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
-import { Pool } from '@uniswap/v3-sdk';
+import { Protocol } from '@monoswap-labs/router-sdk';
+import { Percent } from '@monoswap-labs/sdk-core';
+import { Pair } from '@monoswap-labs/v2-sdk';
+import { Pool } from '@monoswap-labs/v3-sdk';
 import _ from 'lodash';
 
 import { RouteWithValidQuote } from '../routers/alpha-router';
 import { MixedRoute, V2Route, V3Route } from '../routers/router';
 
-import { V3_CORE_FACTORY_ADDRESSES } from './addresses';
+import {V3_CORE_FACTORY_ADDRESSES, V3_INIT_HASH} from './addresses';
 
 import { CurrencyAmount } from '.';
 
@@ -32,7 +32,7 @@ export const routeToString = (
             pool.token0,
             pool.token1,
             pool.fee,
-            undefined,
+            V3_INIT_HASH,
             V3_CORE_FACTORY_ADDRESSES[pool.chainId]
           )}]`
         : ` -- [${Pair.getAddress(

@@ -1,6 +1,6 @@
-import { Protocol } from '@uniswap/router-sdk';
-import { Token } from '@uniswap/sdk-core';
-import { Pool } from '@uniswap/v3-sdk';
+import { Protocol } from '@monoswap-labs/router-sdk';
+import { Token } from '@monoswap-labs/sdk-core';
+import { Pool } from '@monoswap-labs/v3-sdk';
 
 import { MixedRoute, V2Route, V3Route } from '../../../../routers';
 

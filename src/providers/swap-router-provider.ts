@@ -1,5 +1,5 @@
-import { ApprovalTypes } from '@uniswap/router-sdk';
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core';
+import { ApprovalTypes } from '@monoswap-labs/router-sdk';
+import { Currency, CurrencyAmount } from '@monoswap-labs/sdk-core';
 
 import { SwapRouter02__factory } from '../types/other/factories/SwapRouter02__factory';
 import { log, SWAP_ROUTER_02_ADDRESSES } from '../util';

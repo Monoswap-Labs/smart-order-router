@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@uniswap/sdk-core';
+import { ChainId, Token } from '@monoswap-labs/sdk-core';
 import NodeCache from 'node-cache';
 import sinon from 'sinon';
 import {

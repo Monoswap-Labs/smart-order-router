@@ -3,8 +3,8 @@
  */
 
 import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
-import { AllowanceTransfer, PermitSingle } from '@uniswap/permit2-sdk';
-import { Protocol } from '@uniswap/router-sdk';
+import { AllowanceTransfer, PermitSingle } from '@monoswap-labs/permit2-sdk';
+import { Protocol } from '@monoswap-labs/router-sdk';
 import {
   Currency,
   CurrencyAmount,
@@ -12,14 +12,14 @@ import {
   Percent,
   Token,
   TradeType,
-} from '@uniswap/sdk-core';
+} from '@monoswap-labs/sdk-core';
 import {
   PERMIT2_ADDRESS,
   UNIVERSAL_ROUTER_ADDRESS as UNIVERSAL_ROUTER_ADDRESS_BY_CHAIN,
-} from '@uniswap/universal-router-sdk';
-import { Permit2Permit } from '@uniswap/universal-router-sdk/dist/utils/inputTokens';
-import { Pair } from '@uniswap/v2-sdk';
-import { encodeSqrtRatioX96, FeeAmount, Pool } from '@uniswap/v3-sdk';
+} from '@monoswap-labs/universal-router-sdk';
+import { Permit2Permit } from '@monoswap-labs/universal-router-sdk/dist/utils/inputTokens';
+import { Pair } from '@monoswap-labs/v2-sdk';
+import { encodeSqrtRatioX96, FeeAmount, Pool } from '@monoswap-labs/v3-sdk';
 import bunyan from 'bunyan';
 import { BigNumber, providers, Wallet } from 'ethers';
 import { parseEther } from 'ethers/lib/utils';

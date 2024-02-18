@@ -1,7 +1,7 @@
-import { Token } from '@uniswap/sdk-core';
-import { FACTORY_ADDRESS } from '@uniswap/v3-sdk';
+import { Token } from '@monoswap-labs/sdk-core';
+import { FACTORY_ADDRESS } from '@monoswap-labs/v3-sdk';
 
-import { ChainId, CHAIN_TO_ADDRESSES_MAP } from './chain-to-addresses';
+import { CHAIN_TO_ADDRESSES_MAP, ChainId } from './chain-to-addresses';
 import { NETWORKS_WITH_SAME_UNISWAP_ADDRESSES } from './chains';
 
 export const BNB_TICK_LENS_ADDRESS =
@@ -102,6 +102,9 @@ export const SWAP_ROUTER_02_ADDRESSES = (chainId: number): string => {
   if (chainId == ChainId.BNB) {
     return BNB_SWAP_ROUTER_02_ADDRESS;
   }
+  if (chainId == ChainId.BLAST_SEPOLIA) {
+    return "0xF339F231678e738c4D553e6b60305b852a4C526B"
+  }
   return '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45';
 };
 
@@ -115,6 +118,8 @@ export const NONFUNGIBLE_POSITION_MANAGER_ADDRESS =
 export const V3_MIGRATOR_ADDRESS =
   CHAIN_TO_ADDRESSES_MAP[ChainId.MAINNET].v3MigratorAddress;
 export const MULTICALL2_ADDRESS = '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696';
+export const V3_FACTORY_ADDRESS = '0xbAB2F66B5B3Be3cC158E3aC1007A8DF0bA5d67F4';
+export const V3_INIT_HASH = '0xda571d86ad43edb30b030580c077ec40d48a0a4203fc3d13dc8ebda8e7b46c44';
 
 export type AddressMap = { [chainId: number]: string | undefined };
 

@@ -1,5 +1,5 @@
-import { Token } from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
+import { Token } from '@monoswap-labs/sdk-core';
+import { Pair } from '@monoswap-labs/v2-sdk';
 import _ from 'lodash';
 
 import { ChainId } from '../../util/chain-to-addresses';

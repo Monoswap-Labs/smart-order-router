@@ -1,8 +1,8 @@
-import { Currency, Ether, NativeCurrency, Token } from '@uniswap/sdk-core';
+import {Currency, Ether, NativeCurrency, Token} from '@monoswap-labs/sdk-core';
 
-import { ChainId } from './chain-to-addresses';
+import {ChainId} from './chain-to-addresses';
 
-export const V2_SUPPORTED = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA];
+export const V2_SUPPORTED = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA, ChainId.BLAST_SEPOLIA];
 
 export const HAS_L1_FEE = [
   ChainId.OPTIMISM,
@@ -14,6 +14,7 @@ export const HAS_L1_FEE = [
   ChainId.MANTA_PACIFIC_TESTNET,
   ChainId.MANTA_PACIFIC,
   ChainId.SCROLL,
+  ChainId.BLAST_SEPOLIA,
 ];
 
 export const NETWORKS_WITH_SAME_UNISWAP_ADDRESSES = [
@@ -67,6 +68,8 @@ export const ID_TO_CHAIN_ID = (id: number): ChainId => {
       return ChainId.MANTA_PACIFIC;
     case 534352:
       return ChainId.SCROLL;
+    case 168587773:
+      return ChainId.BLAST_SEPOLIA;
     default:
       throw new Error(`Unknown chain id: ${id}`);
   }
